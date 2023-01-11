@@ -156,11 +156,10 @@ export const usePlayerStore = defineStore('player', {
 
                 console.log(data, '<---- data midtrans');
                 const cb = this.changeStatusPro;
-                
+
                 window.snap.pay(data.token, {
                     onSuccess: function (result) {
                         // toast.success("Payment Success");
-                        console.log('SUKSESSS BAYAR!!!');
                         cb();
                     },
                 });
